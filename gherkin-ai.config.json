@@ -1,0 +1,28 @@
+{
+  "projectName": "ruby-rails-react-auth",
+  "architecture": "monolith",
+  "stack": {
+    "language": "ruby",
+    "framework": "rails",
+    "orm": "ruby-orm",
+    "database": "mysql",
+    "validation": "active-model",
+    "auth": "jwt-bcrypt",
+    "messaging": "none",
+    "testing": "rspec"
+  },
+  "frontendStack": {
+    "framework": "react",
+    "language": "javascript",
+    "bundler": "vite",
+    "unitTesting": "vitest",
+    "e2eTesting": "cypress"
+  },
+  "rules": {
+    "bcryptCostFactor": 12,
+    "jwtTtlSeconds": 3600,
+    "strictLayerBoundaries": true,
+    "coverageTarget": 85
+  },
+  "outputDir": "./generated-specs"
+}

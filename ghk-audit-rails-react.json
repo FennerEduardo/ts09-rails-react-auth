@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-09-16T14:20:47.108Z",
+  "createdBy": "gherkin-ai-cli",
+  "artifacts": [
+    {
+      "filePath": "ADR-001-architecture-decisions.md",
+      "type": "other",
+      "checksum": "0b9853602b0ca48a814a065f3d4881aa26c85161556bad0779ef896f6b16a169"
+    },
+    {
+      "filePath": "openapi.json",
+      "type": "openapi",
+      "checksum": "0c2a3ec88b29b627e1e2142b3ec7094c0498932b4758dccbbdc9b851f6d6f782"
+    },
+    {
+      "filePath": "asyncapi.json",
+      "type": "contract",
+      "checksum": "3cce4290eac3047cc60a6a72fea622722ff993c42137b8a902fbad93fb395e4f"
+    },
+    {
+      "filePath": "fixtures.ts",
+      "type": "fixture",
+      "checksum": "da689bc980afbdb01b63019b740ab4f6a06fafa5d787f93874190be4b41d28ad"
+    },
+    {
+      "filePath": "seed.sql",
+      "type": "fixture",
+      "checksum": "7687b98118f82dd9a4804fceb4e249238bbee6904aef171b204848b36ce3964e"
+    },
+    {
+      "filePath": "spec/steps/autenticaci_n_jwt_y_creaci_n_de_pedidos_en_rails_7_api_steps.rb",
+      "type": "test",
+      "checksum": "cff6e7c417d622bb27d89219c26275c772983c277d20c4db05188d66224b536f"
+    },
+    {
+      "filePath": "frontend/store/autenticación-jwt-y-creación-de-pedidos-en-rails-7-apiSlice.ts",
+      "type": "test",
+      "checksum": "bbc782414ca96a3d39bd855093756dca436345edfd2e76382fe2700f6cb4d3ea"
+    },
+    {
+      "filePath": "docker-compose.yml",
+      "type": "config",
+      "checksum": "bbb22129c6e042ebd461f570b2a0b626961f22c68a61ed5f61925cdd9a54f551"
+    },
+    {
+      "filePath": ".env.example",
+      "type": "config",
+      "checksum": "ede61d11b6f4725f777f61e58cd56d3dc127535c50c954df35f84d57a58927e3"
+    },
+    {
+      "filePath": "infrastructure/lib/ruby-rails-react-auth-stack.ts",
+      "type": "config",
+      "checksum": "a09bbf054fb0a95d4675d8fc0d4474fa67d2fff3cfb5e15a6e140dbb09573cdf"
+    },
+    {
+      "filePath": "infrastructure/cdk.json",
+      "type": "config",
+      "checksum": "555b30bcd93838b9d8d1fb15fe9d721c328167e96b570884ac7a2b1ca74e35aa"
+    },
+    {
+      "filePath": "infrastructure/package.json",
+      "type": "config",
+      "checksum": "386f37052bca799ed318e787710f50658a89bc1d9b0342a35768c0738ce1b5af"
+    },
+    {
+      "filePath": "prompts/domain-agent.md",
+      "type": "prompt",
+      "checksum": "e9404569011583cb227a831c00c6aa078fec350362fb7c85a8615d4cbda2d5a3"
+    },
+    {
+      "filePath": "prompts/backend-agent.md",
+      "type": "prompt",
+      "checksum": "2a3f753489549b0d127db8707483ce281205868fc2f078dc9eab1a3a09754f3a"
+    },
+    {
+      "filePath": "prompts/qa-agent.md",
+      "type": "prompt",
+      "checksum": "eda75c7a06b9c49fad364fd0b51e71da291f02013b17b5c0d9241b4a4735fe02"
+    }
+  ]
+}
