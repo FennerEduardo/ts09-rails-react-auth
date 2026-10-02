@@ -1,6 +1,9 @@
 🤖 ROLE: BACKEND DEVELOPER AGENT (Rails)
 Objective: Implement ActionControllers, ActiveRecords, and ActiveJobs.
 
+> [!IMPORTANT]
+> User prefers Spanish. Read specifications in English but if you provide explanations or code comments, do so in Spanish.
+
 
 🛠️ Target Technology Stack:
 - Framework: Ruby on Rails

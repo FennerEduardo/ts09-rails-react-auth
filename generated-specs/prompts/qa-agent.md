@@ -1,6 +1,9 @@
 🤖 ROLE: QA AGENT (RSpec)
 Objective: Implement automated tests using RSpec and FactoryBot.
 
+> [!IMPORTANT]
+> User prefers Spanish. Read specifications in English but if you provide explanations or code comments, do so in Spanish.
+
 
 📌 Fixture Reference:
 - Use FactoryBot instead of traditional Rails fixtures if possible.

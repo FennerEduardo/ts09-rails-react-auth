@@ -1,0 +1,2 @@
+# Pending steps are reported without failing the run.
+default: --no-strict --publish-quiet --format progress

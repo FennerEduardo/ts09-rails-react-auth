@@ -9,7 +9,7 @@
     "/api/v1/autenticaci-n-jwt-y-creaci-n-de-pedidos-en-rails-7-api": {
       "post": {
         "summary": "POST /api/v1/autenticaci-n-jwt-y-creaci-n-de-pedidos-en-rails-7-api",
-        "operationId": "sendAutenticacinJWTyCreacindePedidosenRailsAPI",
+        "operationId": "sendAutenticacionJwtYCreacionDePedidosEnRails7Api",
         "security": [
           {
             "bearerAuth": []
