@@ -26,3 +26,12 @@ Objective: Implement automated tests using RSpec and FactoryBot.
    - Application Layer (Use Cases) orchestrates domain entities but does not contain business logic.
    - Infrastructure Layer implements persistence, external APIs, and framework-specific code.
 3. **OUTPUT FORMAT**: You MUST output your response strictly as valid JSON. Do not include markdown codeblocks (like ```json). The JSON must be an object with a "files" array: { "files": [{ "filePath": "...", "content": "..." }] }. Any deviation will cause a pipeline failure.
+
+## [MANDATORY] Step Definitions Dictionary
+You MUST reuse the following existing Step Definitions whenever possible instead of inventing new ones:
+
+- `Given ^que un cliente realiza POST a `\/api\/v1\/users\/sign_in` con credenciales válidas$` (found in /home/fenner/apps/fenner/ghk-test-projects/ts09-rails-react-auth/generated-specs/features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb)
+- `Then ^Rails API responde con HTTP 200 y el Header `Authorization: Bearer <jwt_token>`$` (found in /home/fenner/apps/fenner/ghk-test-projects/ts09-rails-react-auth/generated-specs/features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb)
+- `When ^el cliente React envía POST a `\/api\/v1\/orders` adjuntando el Bearer Token$` (found in /home/fenner/apps/fenner/ghk-test-projects/ts09-rails-react-auth/generated-specs/features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb)
+- `Then ^el `Api::V1::OrdersController` ejecuta el `CreateOrderService`$` (found in /home/fenner/apps/fenner/ghk-test-projects/ts09-rails-react-auth/generated-specs/features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb)
+- `Then ^RSpec valida que la transacción y la auditoría se persistan correctamente$` (found in /home/fenner/apps/fenner/ghk-test-projects/ts09-rails-react-auth/generated-specs/features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb)

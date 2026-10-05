@@ -3,7 +3,7 @@ version: '3.8'
 services:
   # Host Environment SDK Isolation Sandbox
   app:
-    image: ruby:3.3-alpine
+    image: ruby:3.3
     container_name: ruby-rails-react-auth-app
     volumes:
       - .:/app

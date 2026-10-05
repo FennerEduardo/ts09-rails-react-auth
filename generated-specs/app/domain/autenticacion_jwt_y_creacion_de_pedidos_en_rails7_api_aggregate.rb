@@ -17,6 +17,14 @@ class AutenticacionJwtYCreacionDePedidosEnRails7ApiAggregate
     @pending_events = []
   end
 
+  # Rebuilds an aggregate from persisted state; no events are recorded.
+  def self.restore(id, state, version)
+    new(id).tap do |aggregate|
+      aggregate.instance_variable_set(:@state, state)
+      aggregate.instance_variable_set(:@version, version)
+    end
+  end
+
   # Events recorded since the aggregate was loaded (to be saved via the outbox).
   def pending_events
     @pending_events.dup

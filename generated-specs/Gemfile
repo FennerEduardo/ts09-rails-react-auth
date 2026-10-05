@@ -4,6 +4,9 @@ ruby ">= 3.2"
 
 gem "rails", "~> 8.0.0"
 gem "puma", ">= 6.0"
+gem "pg", "~> 1.5"
+gem "bunny", "~> 2.23"
+gem "opentelemetry-sdk", "~> 1.5"
 
 group :development, :test do
   gem "rspec-rails", "~> 7.1"
