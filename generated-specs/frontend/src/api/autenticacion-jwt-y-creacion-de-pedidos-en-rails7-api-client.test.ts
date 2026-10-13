@@ -10,18 +10,19 @@ describe('AutenticacionJwtYCreacionDePedidosEnRails7Api API client', () => {
     expect(COMMANDS).toEqual(['process_autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api']);
   });
 
-  it('posts the command with tenant and idempotency headers', async () => {
-    const fetch = fakeFetch(201, { type: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1 });
-    const client = createAutenticacionJwtYCreacionDePedidosEnRails7ApiClient({ baseUrl: 'https://api.test/', tenantId: 'acme', fetch });
+  it('posts the command with the bearer token and idempotency key', async () => {
+    const fetch = fakeFetch(202, { status: 'created', eventType: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1 });
+    const client = createAutenticacionJwtYCreacionDePedidosEnRails7ApiClient({ baseUrl: 'https://api.test/', token: 'jwt-1', fetch });
 
     const result = await client.processAutenticacionJwtYCreacionDePedidosEnRails7Api('agg-1', { amount: 100 }, { idempotencyKey: 'key-1' });
 
-    expect(result).toEqual({ type: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1 });
+    expect(result).toEqual({ type: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1, status: 'created' });
     const [url, init] = fetch.mock.calls[0];
     expect(url).toBe('https://api.test/api/v1/autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api/agg-1/process_autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api');
     expect(init?.method).toBe('POST');
-    expect((init?.headers as Record<string, string>)['X-Tenant-Id']).toBe('acme');
-    expect((init?.headers as Record<string, string>)['X-Idempotency-Key']).toBe('key-1');
+    expect((init?.headers as Record<string, string>).Authorization).toBe('Bearer jwt-1');
+    expect((init?.headers as Record<string, string>)['X-Tenant-Id']).toBeUndefined();
+    expect((init?.headers as Record<string, string>)['Idempotency-Key']).toBe('key-1');
     expect(JSON.parse(String(init?.body))).toEqual({ amount: 100 });
   });
 

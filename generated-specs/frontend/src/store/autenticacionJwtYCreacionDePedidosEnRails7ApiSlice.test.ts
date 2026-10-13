@@ -7,7 +7,7 @@ describe('autenticacionJwtYCreacionDePedidosEnRails7Api slice', () => {
   it('records the event returned by the backend', async () => {
     const result = { type: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1 };
     const client = { execute: vi.fn().mockResolvedValue(result) } as unknown as AutenticacionJwtYCreacionDePedidosEnRails7ApiClient;
-    const store = createAppStore(client);
+    const store = createAppStore({ autenticacionJwtYCreacionDePedidosEnRails7Api: client });
 
     await store.dispatch(executeCommand({ id: 'agg-1', command: 'process_autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api' }));
 
@@ -16,7 +16,7 @@ describe('autenticacionJwtYCreacionDePedidosEnRails7Api slice', () => {
 
   it('keeps the error message when the command fails', async () => {
     const client = { execute: vi.fn().mockRejectedValue(new Error('Command id is required')) } as unknown as AutenticacionJwtYCreacionDePedidosEnRails7ApiClient;
-    const store = createAppStore(client);
+    const store = createAppStore({ autenticacionJwtYCreacionDePedidosEnRails7Api: client });
 
     await store.dispatch(executeCommand({ id: 'agg-1', command: 'process_autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api' }));
 

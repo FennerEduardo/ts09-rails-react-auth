@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Autenticación JWT y Creación de Pedidos en Rails 7 API API Specification",
+    "title": "ruby-rails-react-auth API",
     "version": "1.0.0",
-    "description": "Auto-generated OpenAPI specification for Autenticación JWT y Creación de Pedidos en Rails 7 API from Gherkin feature spec."
+    "description": "Service API of ruby-rails-react-auth, merged from 1 feature contract(s) in contracts/."
   },
   "paths": {
     "/api/v1/autenticaci-n-jwt-y-creaci-n-de-pedidos-en-rails-7-api": {

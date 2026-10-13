@@ -1,0 +1,10 @@
+{
+  "asyncapi": "2.6.0",
+  "info": {
+    "title": "Autenticación JWT y Creación de Pedidos en Rails 7 API AsyncAPI Specification",
+    "version": "1.0.0",
+    "description": "Auto-generated AsyncAPI events for Autenticación JWT y Creación de Pedidos en Rails 7 API from Gherkin feature spec."
+  },
+  "defaultContentType": "application/json",
+  "channels": {}
+}

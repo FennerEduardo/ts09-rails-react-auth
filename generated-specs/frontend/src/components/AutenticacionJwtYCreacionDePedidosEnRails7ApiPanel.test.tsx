@@ -10,7 +10,7 @@ describe('AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel', () => {
   it('executes a command and lists the resulting event', async () => {
     const client = { execute: vi.fn().mockResolvedValue({ type: 'ProcessAutenticacionJwtYCreacionDePedidosEnRails7ApiCompleted', aggregateId: 'agg-1', version: 1 }) } as unknown as AutenticacionJwtYCreacionDePedidosEnRails7ApiClient;
     render(
-      <Provider store={createAppStore(client)}>
+      <Provider store={createAppStore({ autenticacionJwtYCreacionDePedidosEnRails7Api: client })}>
         <AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel />
       </Provider>
     );
@@ -24,7 +24,7 @@ describe('AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel', () => {
 
   it('disables commands until an aggregate id is entered', () => {
     render(
-      <Provider store={createAppStore({ execute: vi.fn() } as unknown as AutenticacionJwtYCreacionDePedidosEnRails7ApiClient)}>
+      <Provider store={createAppStore({ autenticacionJwtYCreacionDePedidosEnRails7Api: { execute: vi.fn() } as unknown as AutenticacionJwtYCreacionDePedidosEnRails7ApiClient })}>
         <AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel />
       </Provider>
     );

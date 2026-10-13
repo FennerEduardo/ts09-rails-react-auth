@@ -3,7 +3,7 @@
 # Topic exchange -> consumer queue, which dead-letters rejected messages to a fanout DLX -> DLQ.
 RuntimeTopology = Struct.new(:exchange, :queue, :dlx, :dlq) do
   def self.default
-    new("autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api.events", "autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api.consumer", "autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api.dlx", "autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api.dlq")
+    new("ruby-rails-react-auth.events", "ruby-rails-react-auth.consumer", "ruby-rails-react-auth.dlx", "ruby-rails-react-auth.dlq")
   end
 
   def self.for_prefix(prefix)

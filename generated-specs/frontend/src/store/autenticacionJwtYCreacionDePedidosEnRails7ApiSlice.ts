@@ -15,9 +15,9 @@ export interface ExecuteArgs {
   payload?: Record<string, unknown>;
 }
 
-export const executeCommand = createAsyncThunk<CommandResult, ExecuteArgs, { extra: { client: AutenticacionJwtYCreacionDePedidosEnRails7ApiClient } }>(
+export const executeCommand = createAsyncThunk<CommandResult, ExecuteArgs, { extra: { clients: { autenticacionJwtYCreacionDePedidosEnRails7Api: AutenticacionJwtYCreacionDePedidosEnRails7ApiClient } } }>(
   'autenticacionJwtYCreacionDePedidosEnRails7Api/execute',
-  ({ id, command, payload }, { extra }) => extra.client.execute(id, command, payload, { idempotencyKey: crypto.randomUUID() })
+  ({ id, command, payload }, { extra }) => extra.clients.autenticacionJwtYCreacionDePedidosEnRails7Api.execute(id, command, payload, { idempotencyKey: crypto.randomUUID() })
 );
 
 const autenticacionJwtYCreacionDePedidosEnRails7ApiSlice = createSlice({
