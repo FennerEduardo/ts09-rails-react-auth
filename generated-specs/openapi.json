@@ -6,9 +6,9 @@
     "description": "Service API of ruby-rails-react-auth, merged from 1 feature contract(s) in contracts/."
   },
   "paths": {
-    "/api/v1/autenticaci-n-jwt-y-creaci-n-de-pedidos-en-rails-7-api": {
+    "/api/v1/autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api": {
       "post": {
-        "summary": "POST /api/v1/autenticaci-n-jwt-y-creaci-n-de-pedidos-en-rails-7-api",
+        "summary": "POST /api/v1/autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api",
         "operationId": "sendAutenticacionJwtYCreacionDePedidosEnRails7Api",
         "security": [
           {

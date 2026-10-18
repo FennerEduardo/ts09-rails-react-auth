@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 # Publishes pending outbox rows. Rows are claimed with FOR UPDATE SKIP LOCKED and a lease, so
-# concurrent relays never publish the same row; publisher confirms guarantee delivery to the broker
-# before a row is marked published. Use one relay (and channel) per thread.
+# concurrent relays never publish the same row; the publisher returns only once the broker has
+# accepted the message (RabbitMQ confirms, Pub/Sub publish), before a row is marked published.
+# Use one relay (and publisher) per thread.
 class OutboxRelay
-  def initialize(database_url, channel, exchange = RuntimeTopology.default.exchange, schema = "public", lease_seconds: 30, max_attempts: 5)
+  def initialize(database_url, publisher, schema = "public", lease_seconds: 30, max_attempts: 5)
     @database_url = database_url
-    @channel = channel
-    @channel.confirm_select
-    @exchange = channel.topic(exchange, durable: true)
+    @publisher = publisher
     @s = RuntimeSchema.name_for(schema)
     @lease_seconds = lease_seconds
     @max_attempts = max_attempts
@@ -31,15 +30,12 @@ class OutboxRelay
 
   def publish(conn, row, worker_id)
     parent = RuntimeTelemetry.context_from(row["traceparent"])
-    span = RuntimeTelemetry.tracer.start_span("#{@exchange.name} publish", with_parent: parent, kind: :producer,
-                                              attributes: { "messaging.system" => "rabbitmq", "messaging.destination.name" => @exchange.name,
+    destination = @publisher.destination
+    span = RuntimeTelemetry.tracer.start_span("#{destination} publish", with_parent: parent, kind: :producer,
+                                              attributes: { "messaging.system" => @publisher.system, "messaging.destination.name" => destination,
                                                             "messaging.message.id" => row["id"], "tenant.id" => row["tenant_id"] })
-    headers = { "tenant_id" => row["tenant_id"] }
-    traceparent = RuntimeTelemetry.traceparent_of(span, parent)
-    headers["traceparent"] = traceparent if traceparent
-    @exchange.publish(row["payload"], routing_key: row["event_type"], message_id: row["id"], persistent: true,
-                                      content_type: "application/json", type: row["event_type"], headers: headers)
-    raise "broker did not confirm #{row['id']}" unless @channel.wait_for_confirms
+    @publisher.publish(BrokerMessage.new(message_id: row["id"], event_type: row["event_type"], tenant_id: row["tenant_id"],
+                                         traceparent: RuntimeTelemetry.traceparent_of(span, parent), body: row["payload"]))
 
     conn.exec_params("UPDATE #{@s}.ghk_outbox SET published_at = now(), claimed_until = NULL WHERE id = $1 AND claimed_by = $2", [row["id"], worker_id])
     true
