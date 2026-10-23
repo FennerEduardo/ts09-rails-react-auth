@@ -7,6 +7,7 @@ gem "puma", ">= 6.0"
 gem "pg", "~> 1.5"
 gem "bunny", "~> 2.23"
 gem "opentelemetry-sdk", "~> 1.5"
+gem "opentelemetry-exporter-otlp", "~> 0.37"
 
 group :development, :test do
   gem "rspec-rails", "~> 7.1"

@@ -4,7 +4,8 @@ namespace :outbox do
   desc "Publish the transactional outbox to the event broker until interrupted (DATABASE_URL; AMQP_URL or PUBSUB_*)"
   task relay: :environment do
     broker = EventBroker.connect
-    broker.declare(RuntimeTopology.default)
+    # GHK_DECLARE_TOPOLOGY=false when infrastructure as code owns the topology (least-privilege credentials).
+    broker.declare(RuntimeTopology.default) unless ENV["GHK_DECLARE_TOPOLOGY"] == "false"
     publisher = broker.publisher(RuntimeTopology.default.exchange)
     relay = OutboxRelay.new(ENV.fetch("DATABASE_URL"), publisher)
     worker_id = "autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api-#{SecureRandom.hex(6)}"
