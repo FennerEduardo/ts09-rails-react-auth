@@ -1,0 +1,502 @@
+{
+  "version": "2",
+  "cliVersion": "3.2.1",
+  "features": {
+    "features/rails_jwt_order.feature": {
+      "checksum": "680872ae6bb28968170cd802762b819601d5a5d2df5d8d78f3e9e86fb3d53f7c",
+      "contracts": {
+        "contracts/rails-jwt-order/ADR-AutenticacionJwtYCreacionDePedidosEnRails7Api.md": "0b9853602b0ca48a814a065f3d4881aa26c85161556bad0779ef896f6b16a169",
+        "contracts/rails-jwt-order/openapi.json": "11b1d33057ba5af74ca236a755e9bfe8d136e1fc3d149f349a200237a73638f4",
+        "openapi.json": "2a3859898057aa3fbee8adacb09c56646e354ba3ff922d30496552b568149345",
+        "contracts/rails-jwt-order/asyncapi.json": "3cce4290eac3047cc60a6a72fea622722ff993c42137b8a902fbad93fb395e4f",
+        "asyncapi.json": "eeb89d71bcebb63c1d62a57253f49752788868a4d7ac2d89b9c313d99f23441f"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "filePath": ".dockerignore",
+      "type": "test",
+      "checksum": "699f15b6b4cb29cc661b989d9fc678ad933c64aca6abc006bb8fd0baf921e981",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": ".env.example",
+      "type": "config",
+      "checksum": "c072a9060c26044eb4c54045ca27fd0d2eb997a0c7aa7d8a18a8654cb86a78e9",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": ".rspec",
+      "type": "test",
+      "checksum": "a68a4b72a4aeff4a8657f853efade3ed58c31a50bf52750e0a3e03e9b2dc3dea",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "ADR-001-architecture-decisions.md",
+      "type": "other",
+      "checksum": "0b9853602b0ca48a814a065f3d4881aa26c85161556bad0779ef896f6b16a169",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/auth/jwt_tenant.rb",
+      "type": "test",
+      "checksum": "063009090a0aa57b2044e4928c3893e059c1019a6bcc14ba68f2ae165b7538f9",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/controllers/application_controller.rb",
+      "type": "test",
+      "checksum": "7b798caadf77808ed3bb93d77acde35a2478e4b26bce01e7f219cc02379ee429",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/controllers/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_controller.rb",
+      "type": "test",
+      "checksum": "294b715a4c8ddd0c8eb2514d07a2378efae5a6f3ab816c6ad33518d28f19fd6b",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/domain/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_aggregate.rb",
+      "type": "test",
+      "checksum": "40bd4db6f46288690b4d62edf8806fb5595ba0ab362508bad225adcee307c337",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/domain/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_command.rb",
+      "type": "test",
+      "checksum": "220455557f9216058371113626d367a19aab62d38268111bad93c6dd89ad9509",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/domain/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_domain_event.rb",
+      "type": "test",
+      "checksum": "fe1cafb46d943fe536de81dafa7697707a1a745c4c8d172803089136213132df",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/domain/domain_validation_error.rb",
+      "type": "test",
+      "checksum": "cda3df81955b61cf5a80013e0c9dc6080ed9df416006a09ebfd448f5c070e478",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/broker_delivery.rb",
+      "type": "test",
+      "checksum": "c2620cbad3bb2f1e59a6c79e76cbba7738acd30b2e13ad92e719f93783b0b743",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/broker_message.rb",
+      "type": "test",
+      "checksum": "4405f9e06869836286341fbfe91eedc257011370ddaab1295e58095cdf75741e",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/command_service.rb",
+      "type": "test",
+      "checksum": "142cafabf5b3c5ca9caef70ee7b49a2c0e54491e81e910ab14f8a80b2c57d570",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/event_broker.rb",
+      "type": "test",
+      "checksum": "1b568341480572917c3f209501deaa28bdfeeefb2296fe359d7ccb1010517301",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/inbox_consumer.rb",
+      "type": "test",
+      "checksum": "4460ac4fdac6a806dad7bda4caa188793a21c01b1e15152a217cf13fb78ae11b",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/outbox_relay.rb",
+      "type": "test",
+      "checksum": "c7b8eaf042768f8333858b118f8ff3ac01528b4abadd226931d1c8600428ef1d",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/pub_sub_broker.rb",
+      "type": "test",
+      "checksum": "5339a247d0e5f92b5592e45935d6c74417ac1e8deab374d311cf013a494c5322",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/rabbit_mq_broker.rb",
+      "type": "test",
+      "checksum": "214dd2286574e12a80d7c6782f98a96191c90f4646217c3e9abe83c391979ce6",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/runtime_schema.rb",
+      "type": "test",
+      "checksum": "0ced7b4a3884b4c3bb98cebd293dfb32912e2577e4b2540263e69b721b0c23fa",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/runtime_telemetry.rb",
+      "type": "test",
+      "checksum": "c0c92cde9ea93ef971ed8ba84aec31a56d8f1bf8e89336fbaa2c3d0423ee5ef0",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/runtime_topology.rb",
+      "type": "test",
+      "checksum": "5736f1b40806172bda251cd5eccfec9ce7ce38d3b57169e4ccb7812d187d3a91",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "app/runtime/saga_orchestrator.rb",
+      "type": "test",
+      "checksum": "d36c13e53609e8b62f9e919b4584e9d8a7af4d04609f509ab54720d0cbb83c17",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "asyncapi.json",
+      "type": "contract",
+      "checksum": "eeb89d71bcebb63c1d62a57253f49752788868a4d7ac2d89b9c313d99f23441f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "bin/rails",
+      "type": "test",
+      "checksum": "0862d7bc09d5ed61785d677ef2dba10ce285387d4d5d9e3d90d97630e3f69ab6",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config.ru",
+      "type": "test",
+      "checksum": "1496b3300336404623b29ef8316e8d91105ad3df30f5e33344d414149207d22b",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/application.rb",
+      "type": "test",
+      "checksum": "6784a18c1ce671b8affdbcc64aa2817e6ff35ee503cb27baffc0604709a8d24d",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/boot.rb",
+      "type": "test",
+      "checksum": "9dfc6e76e78374945645ae6d18ecfd84d445931e3f55424793d146d3fcf31f5f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/environment.rb",
+      "type": "test",
+      "checksum": "0ec96b5fcce886083e3eb1cc5c73d4a7392de463f4aa21645e1a94a173813501",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/initializers/ghk_runtime_schema.rb",
+      "type": "test",
+      "checksum": "eaad66695c8bf726366260ee613c8d2adf6b4b39cd2aa2d0990848d2a0e2a0db",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/initializers/opentelemetry.rb",
+      "type": "test",
+      "checksum": "ec3cd1b36258673dc46e9b020254ed9b603bf3d3a0899d42ea258c0c1befa6df",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "config/routes.rb",
+      "type": "test",
+      "checksum": "d6d10b240987b975923a5e4fb946519fb00d3cba0f099a44f1d16b3d2bdd5463",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "contracts/rails-jwt-order/ADR-AutenticacionJwtYCreacionDePedidosEnRails7Api.md",
+      "type": "other",
+      "checksum": "0b9853602b0ca48a814a065f3d4881aa26c85161556bad0779ef896f6b16a169",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "contracts/rails-jwt-order/asyncapi.json",
+      "type": "contract",
+      "checksum": "3cce4290eac3047cc60a6a72fea622722ff993c42137b8a902fbad93fb395e4f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "contracts/rails-jwt-order/openapi.json",
+      "type": "openapi",
+      "checksum": "11b1d33057ba5af74ca236a755e9bfe8d136e1fc3d149f349a200237a73638f4",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "cucumber.yml",
+      "type": "test",
+      "checksum": "822fbb17d96f03e730ef08ecb1d9f807a844a188e0255dcffafbfa22c8f0427c",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "docker-compose.yml",
+      "type": "config",
+      "checksum": "1639bc4bef379e7ce9d369abc582d11efc16df66e91bca4af6768c749f70907b",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "Dockerfile",
+      "type": "test",
+      "checksum": "d1de20880552292f1e51e3118f55cc15470bd0c4e26bbee36ee09597093e901e",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "features/rails_jwt_order.feature",
+      "type": "other",
+      "checksum": "680872ae6bb28968170cd802762b819601d5a5d2df5d8d78f3e9e86fb3d53f7c",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "features/step_definitions/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_steps.rb",
+      "type": "test",
+      "checksum": "46e2695f587fdd70e83d2194f5cee1244d33e700fb0cb624a3c746dbcbd96871",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "features/support/env.rb",
+      "type": "test",
+      "checksum": "f4b57c403b71acbac3a9a8f3c4282db877cf5e4ba8566aefe2e75b3f3f352b0f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "fixtures.ts",
+      "type": "fixture",
+      "checksum": "305abeea0ce3099d09c3647fedfbfb50150e751757d1223cf4ae5416475fe94f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/index.html",
+      "type": "test",
+      "checksum": "91231fa964ea8c4115764cde2e0275284eae43cc97d5ba9e9535e5f21cd75ea8",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/package.json",
+      "type": "test",
+      "checksum": "22078ac6219ecbe509fb6356680fb862cfd90da5e70eb5e1ecec3c2e41276db1",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/api/autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api-client.test.ts",
+      "type": "test",
+      "checksum": "c6587da07314d1372f36144fbe779d73b8c2a634acfa2643651843da1e44bb3c",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/api/autenticacion-jwt-y-creacion-de-pedidos-en-rails7-api-client.ts",
+      "type": "test",
+      "checksum": "fa31fa7cf5e2b2d91ac79784ae22c7c68280d8cf0314a1ac1622d04a1d458e93",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/components/AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel.test.tsx",
+      "type": "test",
+      "checksum": "362e898a4c5710a2d6bdca3d1ce04684f190c2349bc0c37a9c4a13a768a5825d",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/components/AutenticacionJwtYCreacionDePedidosEnRails7ApiPanel.tsx",
+      "type": "test",
+      "checksum": "60da9aab56dd6c0558f113bfe994b187871894883c29583f290a70886b2aab84",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/main.tsx",
+      "type": "test",
+      "checksum": "bf0511af01799811cc01624642b8e32d3593290971b61973ea23cbd33b883903",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/setupTests.ts",
+      "type": "test",
+      "checksum": "91a3c8962a0edcb956206a501d943fe99e1c78c6d4d8b5c9a948a3362c75978c",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/store/autenticacionJwtYCreacionDePedidosEnRails7ApiSlice.test.ts",
+      "type": "test",
+      "checksum": "c952fdcc5ee020eec6615f3f3c6a5aeb51ca123bb5347f41d3c7fd6e639d8693",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/store/autenticacionJwtYCreacionDePedidosEnRails7ApiSlice.ts",
+      "type": "test",
+      "checksum": "cb9e06c6dca16dc9fdf990ea5d363ec89b839c14ec59844f0a9b38ba3aca4216",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/store/store.ts",
+      "type": "test",
+      "checksum": "d6f073d7b533daf44efa422b28baf0253f4cc5f9d6b437f943493ba1e6381993",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/src/vite-env.d.ts",
+      "type": "test",
+      "checksum": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/tsconfig.json",
+      "type": "test",
+      "checksum": "eeaa7e4b98fdd40c5c63c132c526340c380f8a68fff33ed39266eadbe7cea605",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "frontend/vite.config.ts",
+      "type": "test",
+      "checksum": "fcd047ac9f225a8a55fb19f2f29f5c91dad0560ecfdb714be494914244bec20f",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "Gemfile",
+      "type": "test",
+      "checksum": "bc523f82d8cbc3a6322588073d09157231c5ce36dc98aa6481cb1e71d2f73d24",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "lib/tasks/outbox.rake",
+      "type": "test",
+      "checksum": "a0618a03636415abba162b251c8eb3eec3c35be2333471f252c9af8f2b66ecd8",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "openapi.json",
+      "type": "openapi",
+      "checksum": "2a3859898057aa3fbee8adacb09c56646e354ba3ff922d30496552b568149345",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "prompts/backend-agent.md",
+      "type": "prompt",
+      "checksum": "98b3316eb8a543aaeba4ca291de12a4e183a955bb2598928ab10c96f6c73d859",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "prompts/domain-agent.md",
+      "type": "prompt",
+      "checksum": "80c4f8a43141d353845f25371a668b360ac8c14c8af9c8fecf6a7d630743f1e0",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "prompts/qa-agent.md",
+      "type": "prompt",
+      "checksum": "3b3e59be3b3ea6c44d3aed5ad60317544b9d0da9b3490c443b7352ddf4e9d598",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "Rakefile",
+      "type": "test",
+      "checksum": "0036acb820b7b29cb23dccc258b25e36c8530256f30a37bf35111309c3c5eeca",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "seed.sql",
+      "type": "fixture",
+      "checksum": "7687b98118f82dd9a4804fceb4e249238bbee6904aef171b204848b36ce3964e",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "spec/domain/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_aggregate_spec.rb",
+      "type": "test",
+      "checksum": "71619d03472c84823e75ca5b964f1cd3edec96deea79668ee6a4882d46804614",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "spec/integration/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_http_spec.rb",
+      "type": "test",
+      "checksum": "3487a76e505f25b76c5490434c11ccd9f1f3dcec2b8af31b9690e3839c2a8704",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "spec/integration/runtime_spec.rb",
+      "type": "test",
+      "checksum": "feead493244dae869670e9d0015c2e6a3592cb729783a9706f20e4511b518260",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "spec/rails_helper.rb",
+      "type": "test",
+      "checksum": "a675ec072526bc2a2260e0179e8bf1b45535962b69b411dfd5f9cffa5c624e79",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    },
+    {
+      "filePath": "spec/requests/autenticacion_jwt_y_creacion_de_pedidos_en_rails7_api_spec.rb",
+      "type": "test",
+      "checksum": "d4be68f2ade090b823e8616c910876193df5e770cb87d8d7098553c43d9fe317",
+      "feature": "features/rails_jwt_order.feature",
+      "generatedAt": "2026-10-25T05:56:20.623Z"
+    }
+  ],
+  "executions": []
+}
