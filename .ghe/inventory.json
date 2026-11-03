@@ -1,6 +1,6 @@
 {
   "version": "2",
-  "cliVersion": "3.2.2",
+  "cliVersion": "3.3.0",
   "features": {
     "features/rails_jwt_order.feature": {
       "checksum": "680872ae6bb28968170cd802762b819601d5a5d2df5d8d78f3e9e86fb3d53f7c",
@@ -24,9 +24,9 @@
     {
       "filePath": ".env.example",
       "type": "config",
-      "checksum": "c072a9060c26044eb4c54045ca27fd0d2eb997a0c7aa7d8a18a8654cb86a78e9",
+      "checksum": "bd2e25ffdab0da176ac0b2877ff7cc8b53150a16c1cb6a9c03e8f5543cfdd346",
       "feature": "features/rails_jwt_order.feature",
-      "generatedAt": "2026-10-25T05:56:20.623Z"
+      "generatedAt": "2026-11-03T13:48:49.488Z"
     },
     {
       "filePath": ".rspec",
@@ -269,9 +269,9 @@
     {
       "filePath": "docker-compose.yml",
       "type": "config",
-      "checksum": "1639bc4bef379e7ce9d369abc582d11efc16df66e91bca4af6768c749f70907b",
+      "checksum": "49bc34f468d2d30c7a4c0d54acf4330eb414c2747039b85f120ef6c2e708a136",
       "feature": "features/rails_jwt_order.feature",
-      "generatedAt": "2026-10-25T05:56:20.623Z"
+      "generatedAt": "2026-11-03T13:48:49.488Z"
     },
     {
       "filePath": "Dockerfile",
