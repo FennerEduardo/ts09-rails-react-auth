@@ -5,7 +5,7 @@
     "language": "ruby",
     "framework": "rails",
     "orm": "ruby-orm",
-    "database": "mysql",
+    "database": "postgresql",
     "validation": "active-model",
     "auth": "jwt-bcrypt",
     "messaging": "none",
